@@ -1,2 +1,4 @@
 import random
 
+x = 3
+
