@@ -5,6 +5,7 @@ from .Card import Card
 class Deck:
     def __init__(self):
         self.cards = []
+        self.numberOfCards = 52
 
         colors = ['club', 'diamond', 'heart', 'spade']
         figures = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'jack', 'queen', 'king', 'ace']
@@ -21,5 +22,6 @@ class Deck:
             i = i + 1
 
     def popCard(self):
-        i = 52
-        while i > 0:
+        if self.numberOfCards > 0:
+            index = random.randint()%self.numberOfCards
+            return self.cards.pop(index)
